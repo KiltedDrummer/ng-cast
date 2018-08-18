@@ -2,7 +2,8 @@
   <nav class="navbar">
     <div class="col-md-6 col-md-offset-3">
       <search 
-      service="$ctrl.search"/>
+      result="$ctrl.searchResults"
+      service="$ctrl.service"/>
     </div>
   </nav>
   <div class="row">
@@ -11,7 +12,7 @@
     </div>
     <div class="col-md-5">
       <video-list
-      on-click = "$ctrl.onClick"
+      on-click = "$ctrl.selectVideo"
       videos="$ctrl.videos"
       />
     </div>

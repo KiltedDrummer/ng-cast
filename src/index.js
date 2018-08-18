@@ -3,5 +3,6 @@ angular.module('video-player', [])
     $sceDelegateProvider.resourceUrlWhitelist([
       'self',
       'https://www.youtube.com/**',
+      'https://www.googleapis.com/**'
     ]);
   });

@@ -6,13 +6,6 @@ angular.module('video-player')
       result: '<',
       service: '<'
     },
-    controller: function($scope, youTube) {
-      // this.result = youTube.result;
-      // this.search = this.service.search;
-      // this.onSearch = function() {
-        
-      // };
-    },
     templateUrl: 'src/templates/search.html'
     // TODO
   });
