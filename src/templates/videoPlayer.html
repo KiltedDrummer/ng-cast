@@ -1,9 +1,19 @@
 <div class="video-player">
-  <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" ng-src="{{$ctrl.getIframeSrc($ctrl.video.id.videoId)}}"  allowFullScreen></iframe>
-  </div>
-  <div class="video-player-details">
-    <h3>{{$ctrl.video.snippet.title}}</h3>
-    <div>{{$ctrl.video.snippet.description}}</div>
+  <div ng-switch on="$ctrl.video">
+    <div ng-switch-when="undefined">
+      <div>Please wait....</div>
+    </div>
+    <div ng-switch-default>
+      <div class="embed-responsive embed-responsive-16by9">
+        <!-- if no video load "please Wait...." -->
+        <!--  -->
+        <iframe class="embed-responsive-item" ng-src="{{$ctrl.getIframeSrc($ctrl.video.id.videoId)}}"  allowFullScreen></iframe>
+      </div>
+      <div class="video-player-details">
+        <h3>{{$ctrl.video.snippet.title}}</h3>
+        <div>{{$ctrl.video.snippet.description}}</div>
+      </div>
+    </div>
+    
   </div>
 </div>

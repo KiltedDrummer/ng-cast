@@ -11,16 +11,19 @@ angular.module('video-player')
         
       };
       
-      this.search = function() {
-        console.log('seach the youTube');
-        // this.result(); ?
-      };
+      // this.search = function() {
+      //   console.log('seach the youTube');
+      //   // this.result(); ?
+      // };
       
       this.currentVideo = exampleVideoData[0];
       this.videos = exampleVideoData;
-      this.search;
-      this.onClick = function() {
+      
+      var that = this;
+      this.onClick = function(e) {
+        that.currentVideo = e;
       };
+      
     },
     templateUrl: 'src/templates/app.html'
     // TODO
